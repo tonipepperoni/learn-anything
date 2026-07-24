@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Quiz</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="nav" class="nav"></header>
+  <main id="app" class="app"></main>
+  <div id="toasts" class="toasts"></div>
+
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Loading…</p>
+  </div>
+
+  <!-- Load order matters (classic scripts, no modules → works over file://) -->
+  <script src="vendor/sql-wasm.js"></script>
+  <script src="vendor/sql-wasm-b64.js"></script>
+  <script src="data/quiz-db.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

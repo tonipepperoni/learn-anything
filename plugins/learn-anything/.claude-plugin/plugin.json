@@ -1,0 +1,10 @@
+{
+  "name": "learn-anything",
+  "description": "Generate a complete offline study + quiz web app (study guides, gamified quizzes, a timed practice exam, XP/levels/badges, SQLite) for any subject or exam.",
+  "version": "1.0.0",
+  "author": { "name": "tonipepperoni" },
+  "homepage": "https://github.com/tonipepperoni/learn-anything",
+  "repository": "https://github.com/tonipepperoni/learn-anything",
+  "license": "MIT",
+  "keywords": ["study", "quiz", "exam-prep", "flashcards", "learning", "education", "sqlite"]
+}
