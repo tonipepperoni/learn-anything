@@ -742,7 +742,7 @@
         '<button class="btn ghost sm" id="backstudy">← All guides</button>' +
         '<button class="btn primary sm" id="quizthis">Quiz this topic →</button>' +
       '</div>' +
-      '<article class="guide">' +
+      '<article class="guide ' + domClass(tp.domain) + '">' +
         '<header class="guidehead ' + domClass(tp.domain) + '">' +
           '<span class="gh-dom">' + esc(tp.domain) + ' · Topic ' + String(tp.id).padStart(2, '0') + '</span>' +
           '<h1>' + esc(tp.name) + '</h1>' +
