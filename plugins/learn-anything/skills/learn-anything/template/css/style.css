@@ -61,6 +61,72 @@
   --pink:#d33682; --orange:#cb4b16; --yellow:#b58900; --green:#859900; --blue:#268bd2; --purple:#6c71c4;
 }
 
+/* Tokyo Night — deep indigo dark */
+:root[data-theme="tokyonight"] {
+  --bg:#1a1b26; --bg2:#1f2130; --bg-grad:#24283b; --panel:#24283b; --panel2:#2a2e42; --line:#343a54;
+  --text:#c0caf5; --text-soft:#a9b1d6; --muted:#7f89b3; --dim:#565f89;
+  --nav-bg:rgba(26,27,38,.82); --btn-hover:#2f3450; --card-hover:#2a2e42; --inset:rgba(0,0,0,.25);
+  --code-bg:#16161e; --code-inline-bg:rgba(0,0,0,.3); --zebra:rgba(255,255,255,.03);
+  --pink:#f7768e; --orange:#ff9e64; --yellow:#e0af68; --green:#9ece6a; --blue:#7aa2f7; --purple:#bb9af7;
+}
+/* Catppuccin Mocha — cozy pastel dark */
+:root[data-theme="catppuccin-mocha"] {
+  --bg:#1e1e2e; --bg2:#232338; --bg-grad:#292a3d; --panel:#292a3d; --panel2:#313244; --line:#45475a;
+  --text:#cdd6f4; --text-soft:#bac2de; --muted:#a6adc8; --dim:#6c7086;
+  --nav-bg:rgba(30,30,46,.82); --btn-hover:#363749; --card-hover:#313244; --inset:rgba(0,0,0,.25);
+  --code-bg:#181825; --code-inline-bg:rgba(0,0,0,.28); --zebra:rgba(255,255,255,.03);
+  --pink:#f38ba8; --orange:#fab387; --yellow:#f9e2af; --green:#a6e3a1; --blue:#89b4fa; --purple:#cba6f7;
+}
+/* Gruvbox — warm retro dark */
+:root[data-theme="gruvbox"] {
+  --bg:#282828; --bg2:#32302f; --bg-grad:#3c3836; --panel:#3c3836; --panel2:#504945; --line:#504945;
+  --text:#ebdbb2; --text-soft:#d5c4a1; --muted:#a89984; --dim:#7c6f64;
+  --nav-bg:rgba(40,40,40,.85); --btn-hover:#45403c; --card-hover:#3c3836; --inset:rgba(0,0,0,.25);
+  --code-bg:#1d2021; --code-inline-bg:rgba(0,0,0,.3); --zebra:rgba(255,255,255,.03);
+  --pink:#fb4934; --orange:#fe8019; --yellow:#fabd2f; --green:#b8bb26; --blue:#83a598; --purple:#d3869b;
+}
+/* Everforest — soft forest green dark */
+:root[data-theme="everforest"] {
+  --bg:#2d353b; --bg2:#343f44; --bg-grad:#3d484d; --panel:#343f44; --panel2:#3d484d; --line:#475258;
+  --text:#d3c6aa; --text-soft:#bfc9b0; --muted:#9da9a0; --dim:#7a8478;
+  --nav-bg:rgba(45,53,59,.85); --btn-hover:#414d53; --card-hover:#3d484d; --inset:rgba(0,0,0,.22);
+  --code-bg:#232a2e; --code-inline-bg:rgba(0,0,0,.25); --zebra:rgba(255,255,255,.03);
+  --pink:#e67e80; --orange:#e69875; --yellow:#dbbc7f; --green:#a7c080; --blue:#7fbbb3; --purple:#d699b6;
+}
+/* Rosé Pine — muted rose & pine dark */
+:root[data-theme="rose-pine"] {
+  --bg:#191724; --bg2:#1f1d2e; --bg-grad:#26233a; --panel:#1f1d2e; --panel2:#26233a; --line:#403d52;
+  --text:#e0def4; --text-soft:#c9c7db; --muted:#908caa; --dim:#6e6a86;
+  --nav-bg:rgba(25,23,36,.84); --btn-hover:#2a273f; --card-hover:#26233a; --inset:rgba(0,0,0,.28);
+  --code-bg:#161421; --code-inline-bg:rgba(0,0,0,.3); --zebra:rgba(255,255,255,.03);
+  --pink:#eb6f92; --orange:#f6c177; --yellow:#ebbcba; --green:#9ccfd8; --blue:#3e8fb0; --purple:#c4a7e7;
+}
+/* One Dark — the Atom classic */
+:root[data-theme="onedark"] {
+  --bg:#282c34; --bg2:#21252b; --bg-grad:#2c313a; --panel:#2c313a; --panel2:#3a3f4b; --line:#3e4451;
+  --text:#d7dae0; --text-soft:#abb2bf; --muted:#828997; --dim:#5c6370;
+  --nav-bg:rgba(40,44,52,.82); --btn-hover:#333842; --card-hover:#3a3f4b; --inset:rgba(0,0,0,.25);
+  --code-bg:#21252b; --code-inline-bg:rgba(0,0,0,.28); --zebra:rgba(255,255,255,.03);
+  --pink:#e06c75; --orange:#d19a66; --yellow:#e5c07b; --green:#98c379; --blue:#61afef; --purple:#c678dd;
+}
+/* Kanagawa — Hokusai wave dark */
+:root[data-theme="kanagawa"] {
+  --bg:#1f1f28; --bg2:#16161d; --bg-grad:#2a2a37; --panel:#2a2a37; --panel2:#363646; --line:#54546d;
+  --text:#dcd7ba; --text-soft:#c8c093; --muted:#938f7d; --dim:#727169;
+  --nav-bg:rgba(31,31,40,.84); --btn-hover:#33334a; --card-hover:#363646; --inset:rgba(0,0,0,.28);
+  --code-bg:#16161d; --code-inline-bg:rgba(0,0,0,.3); --zebra:rgba(255,255,255,.03);
+  --pink:#e46876; --orange:#ffa066; --yellow:#e6c384; --green:#98bb6c; --blue:#7e9cd8; --purple:#957fb8;
+}
+/* Catppuccin Latte — warm pastel light */
+:root[data-theme="catppuccin-latte"] {
+  --bg:#eff1f5; --bg2:#ffffff; --bg-grad:#e6e9ef; --panel:#ffffff; --panel2:#e6e9ef; --line:#ccd0da;
+  --text:#4c4f69; --text-soft:#5c5f77; --muted:#6c6f85; --dim:#9ca0b0;
+  --nav-bg:rgba(239,241,245,.85); --btn-hover:#dce0e8; --card-hover:#e6e9ef; --inset:rgba(0,0,0,.05);
+  --code-bg:#e6e9ef; --code-inline-bg:rgba(0,0,0,.06); --zebra:rgba(0,0,0,.03);
+  --shadow:0 8px 30px rgba(76,79,105,.15);
+  --pink:#ea76cb; --orange:#fe640b; --yellow:#df8e1d; --green:#40a02b; --blue:#1e66f5; --purple:#8839ef;
+}
+
 * { box-sizing: border-box; }
 [hidden] { display: none !important; } /* author display rules must not override the hidden attribute */
 html, body { margin: 0; padding: 0; }
@@ -400,7 +466,7 @@ select { font: inherit; background: var(--panel); color: var(--text); border: 1p
 /* ---------- settings menu ---------- */
 .gearbtn { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); color: var(--muted); font-size: 17px; display: grid; place-content: center; transition: color .15s, border-color .15s; }
 .gearbtn:hover { color: var(--text); border-color: var(--dim); }
-.settings-pop { position: fixed; top: 58px; right: clamp(12px, 3vw, 32px); z-index: 60; width: 264px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 12px; animation: fade .15s ease; }
+.settings-pop { position: fixed; top: 58px; right: clamp(12px, 3vw, 32px); z-index: 60; width: 264px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 12px; max-height: min(78vh, 560px); overflow-y: auto; animation: fade .15s ease; }
 .settings-pop h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 2px 6px 8px; }
 .theme-opt { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; background: transparent; border: 1px solid transparent; border-radius: 10px; padding: 8px 10px; color: var(--text); font-size: 13.5px; font-weight: 500; }
 .theme-opt:hover { background: var(--panel2); }

@@ -77,8 +77,9 @@ any warnings it prints (bad/missing questions, unknown domains).
   `cd "<target>" && python3 -m http.server 8000`.
 - Optionally `git init` the project so the user has a repo per subject.
 - Tell the user: what was built (N topics, M questions), how to open it, that the
-  **⚙ gear** in the top bar switches themes (Monokai / Dim / Nord / Dracula /
-  Light / Solarized Light), that `node build/build.mjs` rebuilds after editing
+  **⚙ gear** in the top bar switches among 14 themes (Monokai, Nord, Dracula,
+  Tokyo Night, Catppuccin, Gruvbox, Everforest, Rosé Pine, One Dark, Kanagawa,
+  Light, Solarized Light, …), that `node build/build.mjs` rebuilds after editing
   content, and that `node update.mjs` pulls the latest app template.
 
 ## Rules

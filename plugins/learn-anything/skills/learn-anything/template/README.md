@@ -12,8 +12,10 @@ Just open **`index.html`** in a browser. (Or serve it:
 
 ## Themes
 
-Click the **⚙ gear** in the top bar to switch themes — Monokai, Dim, Nord,
-Dracula, Light, Solarized Light. Your choice is remembered per browser.
+Click the **⚙ gear** in the top bar to switch among 14 themes — Monokai, Dim,
+Nord, Dracula, Tokyo Night, Catppuccin Mocha, Gruvbox, Everforest, Rosé Pine,
+One Dark, Kanagawa, Catppuccin Latte, Light, Solarized Light. Your choice is
+remembered per browser.
 
 ## Edit the content
 
