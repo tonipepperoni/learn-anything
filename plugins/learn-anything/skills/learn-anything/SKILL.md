@@ -49,15 +49,21 @@ Read `${CLAUDE_SKILL_DIR}/references/config-schema.md` and write
 - realistic `passMark`, `exam.questions`, `exam.minutes`.
 
 ### 4. Generate the content (parallelize)
-Read `${CLAUDE_SKILL_DIR}/references/content-format.md`. For every topic create
-`<target>/content/<NN-slug>/guide.md` and `<target>/content/<NN-slug>/questions.json`.
+Read `${CLAUDE_SKILL_DIR}/references/content-format.md`. For every topic create,
+under `<target>/content/<NN-slug>/`:
+- `questions.json` — the multiple-choice questions
+- `guide.md` — a focused Markdown study guide
+- **3 `.svg` diagram files** referenced from `guide.md` — each guide has exactly
+  **3 inlined diagrams** (dark-theme SVGs per the content-format spec)
 
-**Generate topics in parallel**: launch subagents (Task tool) — one per topic (or
-a few topics each) — each writing that topic's two files directly, following the
-content format exactly. Instruct each subagent to make questions **accurate,
-unambiguous, position-independent** (options get shuffled) with plausible
-distractors and 1–3 sentence explanations, and to write a focused Markdown study
-guide. Prefer the strongest model available for content quality.
+**Generate topics in parallel**: launch subagents (Task tool) — one per topic —
+each writing that topic's files directly, following the content format exactly.
+Instruct each subagent to make questions **accurate, unambiguous,
+position-independent** (options get shuffled) with plausible distractors and 1–3
+sentence explanations; a focused study guide; and **3 explanatory, self-contained
+dark-theme SVG diagrams** (valid `viewBox`, light text + accent palette) that each
+illustrate a different concept and are referenced at the right spots in the guide.
+Prefer the strongest model available for content quality.
 
 ### 5. Build the database
 ```bash
@@ -77,5 +83,6 @@ any warnings it prints (bad/missing questions, unknown domains).
 - **Do not touch** `index.html`, `css/`, `js/`, `vendor/`, or `build/` in the
   template — they are subject-agnostic. All customization is config + content.
 - Options are shuffled at runtime; never rely on answer position.
-- Guides are self-contained Markdown (no external images).
+- Guides are self-contained Markdown with **3 inline SVG diagrams** each (no
+  raster/external images).
 - Keep one emoji for `icon`; give levels/badges subject-appropriate names.
