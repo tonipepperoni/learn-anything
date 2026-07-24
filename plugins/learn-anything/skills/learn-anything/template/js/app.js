@@ -30,6 +30,47 @@
     } catch (e) {}
   }
 
+  // ---------- theme / settings menu ----------
+  var THEMES = [
+    { id: 'monokai',         name: 'Monokai',         sw: ['#a6e22e', '#66d9ef', '#f92672', '#1d1e19'] },
+    { id: 'dim',             name: 'Dim',             sw: ['#57ab5a', '#6cb6ff', '#f47067', '#1c2128'] },
+    { id: 'nord',            name: 'Nord',            sw: ['#a3be8c', '#88c0d0', '#bf616a', '#2e3440'] },
+    { id: 'dracula',         name: 'Dracula',         sw: ['#50fa7b', '#8be9fd', '#ff79c6', '#282a36'] },
+    { id: 'light',           name: 'Light',           sw: ['#5f9e0e', '#1c86b8', '#c81e6d', '#f4f5f2'] },
+    { id: 'solarized-light', name: 'Solarized Light', sw: ['#859900', '#268bd2', '#d33682', '#fdf6e3'] },
+  ];
+  var THEME_KEY = 'la:theme';
+  function currentTheme() { try { return localStorage.getItem(THEME_KEY) || 'monokai'; } catch (e) { return 'monokai'; } }
+  function applyTheme(id) { document.documentElement.setAttribute('data-theme', id); }
+  function setTheme(id) { try { localStorage.setItem(THEME_KEY, id); } catch (e) {} applyTheme(id); renderSettings(); }
+
+  var settingsOpen = false;
+  function toggleSettings() { settingsOpen = !settingsOpen; renderSettings(); }
+  function closeSettings() { if (settingsOpen) { settingsOpen = false; renderSettings(); } }
+  function renderSettings() {
+    var pop = document.getElementById('settings-pop');
+    if (!settingsOpen) { if (pop) pop.remove(); return; }
+    if (!pop) { pop = document.createElement('div'); pop.id = 'settings-pop'; pop.className = 'settings-pop'; document.body.appendChild(pop); }
+    var cur = currentTheme();
+    pop.innerHTML =
+      '<h3>Theme</h3>' +
+      THEMES.map(function (t) {
+        return '<button class="theme-opt' + (t.id === cur ? ' active' : '') + '" data-settheme="' + t.id + '">' +
+          '<span>' + esc(t.name) + '</span>' +
+          '<span class="swatches">' + t.sw.map(function (c) { return '<span class="sw" style="background:' + c + '"></span>'; }).join('') + '</span>' +
+        '</button>';
+      }).join('') +
+      '<div class="settings-div"></div>' +
+      '<button class="settings-reset" id="settings-reset">↺ Reset progress</button>';
+    Array.prototype.forEach.call(pop.querySelectorAll('[data-settheme]'), function (b) {
+      b.addEventListener('click', function (e) { e.stopPropagation(); setTheme(b.getAttribute('data-settheme')); });
+    });
+    pop.querySelector('#settings-reset').addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (confirm('Reset all progress, XP and badges? This cannot be undone.')) { Store.reset(); closeSettings(); go('home'); }
+    });
+  }
+
   // ---------- small helpers ----------
   function esc(s) {
     return String(s == null ? '' : s)
@@ -101,10 +142,13 @@
         '<span class="lvlmeta"><b>Lv ' + lv.lvl + '</b><small>' + st.xp + ' XP</small></span>' +
         '<span class="lvlbar"><i style="width:' + pct + '%"></i></span>' +
         (st.streak.current > 0 ? '<span class="streak" title="' + st.streak.current + '-day streak">🔥' + st.streak.current + '</span>' : '') +
-      '</div>';
+      '</div>' +
+      '<button class="gearbtn" id="gearbtn" title="Settings" aria-label="Settings">⚙</button>';
     Array.prototype.forEach.call(nav.querySelectorAll('[data-nav]'), function (n) {
       n.addEventListener('click', function () { go(n.getAttribute('data-nav')); });
     });
+    var gb = document.getElementById('gearbtn');
+    if (gb) gb.addEventListener('click', function (e) { e.stopPropagation(); toggleSettings(); });
   }
 
   // ---------- router ----------
@@ -732,6 +776,7 @@
 
   // ---------- keyboard ----------
   function onKey(e) {
+    if (e.key === 'Escape' && settingsOpen) { closeSettings(); return; }
     var map = { a: 0, b: 1, c: 2, d: 3, e: 4, f: 5, '1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5 };
     if (view === 'quiz') {
       var k = e.key.toLowerCase();
@@ -748,6 +793,13 @@
   // ---------- boot ----------
   function init() {
     root = document.getElementById('app');
+    applyTheme(currentTheme());
+    document.addEventListener('click', function (e) {
+      if (!settingsOpen) return;
+      var pop = document.getElementById('settings-pop');
+      var gear = document.getElementById('gearbtn');
+      if (pop && !pop.contains(e.target) && gear && !gear.contains(e.target)) closeSettings();
+    });
     var loader = document.getElementById('loader');
     QuizDB.init().then(function (cfg) {
       CFG = cfg;

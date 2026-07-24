@@ -76,8 +76,10 @@ any warnings it prints (bad/missing questions, unknown domains).
 - Open `<target>/index.html` directly (works over `file://`), or serve it:
   `cd "<target>" && python3 -m http.server 8000`.
 - Optionally `git init` the project so the user has a repo per subject.
-- Tell the user: what was built (N topics, M questions), how to open it, and that
-  re-running `node build/build.mjs` rebuilds after editing content.
+- Tell the user: what was built (N topics, M questions), how to open it, that the
+  **⚙ gear** in the top bar switches themes (Monokai / Dim / Nord / Dracula /
+  Light / Solarized Light), that `node build/build.mjs` rebuilds after editing
+  content, and that `node update.mjs` pulls the latest app template.
 
 ## Rules
 - **Do not touch** `index.html`, `css/`, `js/`, `vendor/`, or `build/` in the

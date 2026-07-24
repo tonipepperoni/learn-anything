@@ -53,6 +53,9 @@ Every generated app includes:
   per-domain results breakdown.
 - **🎮 Gamification** — XP, 10 levels, badges, and daily streaks, all themed to
   the subject.
+- **🎨 Themeable** — a ⚙ settings menu with 6 themes (Monokai, Dim, Nord,
+  Dracula, Light, Solarized Light) for eye comfort; the choice persists per
+  browser.
 - **💾 Real SQLite, zero backend** — questions live in a SQLite DB queried in the
   browser via sql.js (WebAssembly). The DB and wasm are embedded, so the app runs
   offline straight off the filesystem and deploys to any static host / GitHub
@@ -89,6 +92,13 @@ rebuild:
 
 ```bash
 node build/build.mjs
+```
+
+**Updating an existing app** to the latest template (new features, themes, fixes)
+without touching your content or saved progress:
+
+```bash
+node update.mjs
 ```
 
 ## Repo layout
