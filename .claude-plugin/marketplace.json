@@ -1,13 +1,13 @@
 {
   "name": "learn-anything",
-  "owner": { "name": "tonipepperoni" },
+  "owner": { "name": "Make It Run" },
   "description": "Generate polished, offline study + quiz web apps for any subject or exam.",
   "plugins": [
     {
       "name": "learn-anything",
       "source": "./plugins/learn-anything",
       "description": "Generate a complete offline study + quiz web app (guides, gamified quizzes, timed practice exam, SQLite) for any subject or exam.",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "license": "MIT",
       "keywords": ["study", "quiz", "exam-prep", "flashcards", "learning", "education", "sqlite"]
     }

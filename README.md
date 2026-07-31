@@ -18,7 +18,7 @@ same and just works.
 In Claude Code:
 
 ```
-/plugin marketplace add tonipepperoni/learn-anything
+/plugin marketplace add makeit-run/learn-anything
 /plugin install learn-anything@learn-anything
 ```
 
@@ -116,4 +116,4 @@ plugins/learn-anything/
 
 ## License
 
-MIT © tonipepperoni
+MIT © Make It Run
