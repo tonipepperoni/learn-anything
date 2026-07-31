@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const BASE = 'https://raw.githubusercontent.com/makeit-run/learn-anything/main/plugins/learn-anything/skills/learn-anything/template';
+const BASE = 'https://raw.githubusercontent.com/makeit-run/learn-anything/main/plugins/learn/skills/anything/template';
 
 // The app shell — NOT your study.config.json, content/, or generated data/.
 const TEXT_FILES = [

@@ -1,7 +1,7 @@
 {
-  "name": "learn-anything",
+  "name": "learn",
   "description": "Generate a complete offline study + quiz web app (study guides, gamified quizzes, a timed practice exam, XP/levels/badges, SQLite) for any subject or exam.",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "author": { "name": "Make It Run" },
   "homepage": "https://github.com/makeit-run/learn-anything",
   "repository": "https://github.com/makeit-run/learn-anything",

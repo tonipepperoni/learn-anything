@@ -19,7 +19,7 @@ In Claude Code:
 
 ```
 /plugin marketplace add makeit-run/learn-anything
-/plugin install learn-anything@learn-anything
+/plugin install learn@learn-anything
 ```
 
 Then reload plugins (`/reload-plugins`) if prompted.
@@ -30,10 +30,10 @@ Then reload plugins (`/reload-plugins`) if prompted.
 ## Use it
 
 ```
-/learn-anything:learn-anything AWS Solutions Architect exam
-/learn-anything:learn-anything Music Theory fundamentals
-/learn-anything:learn-anything Spanish A1 vocabulary
-/learn-anything:learn-anything the US Constitution
+/learn:anything AWS Solutions Architect exam
+/learn:anything Music Theory fundamentals
+/learn:anything Spanish A1 vocabulary
+/learn:anything the US Constitution
 ```
 
 Claude will design the curriculum, generate the guides + questions (in parallel),
@@ -82,8 +82,8 @@ never edits the template's HTML/CSS/JS. That's what keeps every app consistent
 and makes the system flexible: new subject = new config + content, same app.
 
 See the skill's `references/` for the
-[config schema](plugins/learn-anything/skills/learn-anything/references/config-schema.md)
-and [content format](plugins/learn-anything/skills/learn-anything/references/content-format.md).
+[config schema](plugins/learn/skills/anything/references/config-schema.md)
+and [content format](plugins/learn/skills/anything/references/content-format.md).
 
 ## Editing a generated app
 
@@ -106,9 +106,9 @@ node update.mjs
 
 ```
 .claude-plugin/marketplace.json          # marketplace catalog
-plugins/learn-anything/
+plugins/learn/
 ├── .claude-plugin/plugin.json
-└── skills/learn-anything/
+└── skills/anything/
     ├── SKILL.md                          # generator instructions
     ├── references/                       # config schema + content format
     └── template/                         # the config-driven web app (never edited per-subject)

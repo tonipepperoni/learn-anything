@@ -1,5 +1,5 @@
 ---
-name: learn-anything
+name: anything
 description: Generate a complete, self-contained study + quiz web app for ANY subject or exam — gamified multiple-choice quizzes, per-topic study guides, a timed domain-weighted practice exam, XP/levels/badges/streaks, and a progress dashboard, all backed by SQLite (sql.js) and runnable offline by opening one file. Use when the user wants to build/create a quiz app, study app, exam-prep system, flashcard or practice-test app, or an interactive "learn X / study for Y" system for any topic, course, or certification.
 argument-hint: "<subject or exam — e.g. 'AWS Solutions Architect exam' or 'Music Theory basics'>"
 allowed-tools: Bash Read Write Edit Task
